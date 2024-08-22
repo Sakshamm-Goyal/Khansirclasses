@@ -4,7 +4,7 @@ exports.reviewAndRating = async (req, res) => {
     try {
         const { name, email, testimonial, rating } = req.body;
 
-        if (!name || !email || !testimonial || rating === undefined) {
+        if (!name  || !testimonial || rating === undefined) {
             return res.status(400).json({
                 success: false,
                 message: "Fill all fields carefully"
